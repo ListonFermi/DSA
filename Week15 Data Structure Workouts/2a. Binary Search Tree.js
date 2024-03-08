@@ -70,19 +70,19 @@ class BinarySearchTree {
     }
   }
 
-  delete(val, curr= this.root){
-    if(curr.right == val && !curr.right.right && !curr.right.left){
-      return curr.right =null
-    }else if(curr.left == val && !curr.left.right && !curr.left.left){
-      return curr.left =null
-    }
+  // delete(val, curr= this.root){
+  //   if(curr.right == val && !curr.right.right && !curr.right.left){
+  //     return curr.right =null
+  //   }else if(curr.left == val && !curr.left.right && !curr.left.left){
+  //     return curr.left =null
+  //   }
 
-    if(curr){
-      this.delete(val, curr.right)
-      this.delete(val, curr.left)
-    }
+  //   if(curr){
+  //     this.delete(val, curr.right)
+  //     this.delete(val, curr.left)
+  //   }
 
-  }
+  // }
 
   display() {
     return console.log(this.root);
