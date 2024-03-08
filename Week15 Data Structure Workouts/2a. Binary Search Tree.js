@@ -95,6 +95,7 @@ tree.insert(3);
 tree.insert(15);
 tree.insert(16);
 tree.insert(12);
+tree.insert(24);
 tree.postOrder();
 tree.preOrder();
 tree.inOrder();
