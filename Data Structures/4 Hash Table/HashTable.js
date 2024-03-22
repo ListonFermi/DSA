@@ -8,8 +8,7 @@ In closed hashing there are 3 methods:
 2. Quadratic probing
 3. Double hashing
 
-In closed hashing this is the Linear probing:
-:
+In closed hashing this is the Linear probing method:
 */
 
 class HashTable {
