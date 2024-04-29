@@ -52,5 +52,5 @@ trie.insert('Lis')
 trie.insert('Akil')
 trie.insert('Akash')
 trie.insert('Aravind')
-// console.log(trie.printAllWords());
-console.log(trie.suggestion('A'));
+console.log(trie.printAllWords());
+// console.log(trie.root);

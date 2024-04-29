@@ -18,6 +18,7 @@ class MinHeap {
   extractMin() {
     const A = this.heap;
     const min = A[0];
+    //We'll do a algo to shift the last value of the array and bubble it down
     A[0] = A[A.length - 1];
 
     //bubbling down:
