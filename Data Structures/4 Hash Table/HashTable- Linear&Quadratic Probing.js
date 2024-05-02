@@ -14,22 +14,22 @@ class HashTable {
   }
 
   linearProbing(index) {
-    let start = index, i = 0;
-    while (start < this.capacity) {
-      index += i;
+    const ind = index;
+    let i = 1;
+    while (index < this.capacity) {
+      index = ind + i;
       if (this.array[index] === undefined) return index;
-      start++;
       i++;
     }
     return -1;
   }
 
   quadraticProbing(index) {
-    let start = index, i = 0;
-    while (start < this.capacity) {
-      index += i*i;
+    const ind = index;
+    let i = 1;
+    while (index < this.capacity) {
+      index = ind + (i*i);
       if (this.array[index] === undefined) return index;
-      start++;
       i++;
     }
     return -1;
@@ -42,16 +42,17 @@ class HashTable {
     this.array[index] = [key, value];
   }
 
-  get(key){
+  get(key) {
     let index = 0;
     for (let i = 0; i < key.length; i++) {
       index += key.charCodeAt(i);
     }
     index %= this.capacity;
     //get method for quadratic probing:
-    let start = index, i = 0;
+    let start = index,
+      i = 0;
     while (start < this.capacity) {
-      index += i*i;
+      index += i * i;
       if (this.array[index][0] === key) break;
       start++;
       i++;
@@ -63,5 +64,5 @@ class HashTable {
 const table = new HashTable(50);
 table.set("TN", "Tamil Nadu");
 table.set("NT", "Delhi NCT");
-table.get("NT")
+table.get("NT");
 console.log(table.array);
